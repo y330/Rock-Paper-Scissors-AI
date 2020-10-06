@@ -1,2 +1,1 @@
-# Rock Paper Scissors Game in python 3.8
-Work in progress...
+# Some Python Projects
