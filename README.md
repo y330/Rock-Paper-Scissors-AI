@@ -1,2 +1,5 @@
-# Rock Paper Scissors Game in python 3.8
-Work in progress...
+# Rock Paper Scissors Game
+
+***Yonah Aviv***
+
+[Go to .py](rockPaperScic.py)
