@@ -2,6 +2,7 @@
 # Author: Yonah Aviv
 # Date created: October 6, 2020
 
+#  basic game structure is present however no machine learning model has been implemented 
 import random
 
 
