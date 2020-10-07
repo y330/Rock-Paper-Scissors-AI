@@ -3,36 +3,35 @@
 # Date created: October 6, 2020
 
 import random
-import struct
 
 
 def getwinner(cs, us):
-    # winCombo = [0,1], [1,2], [2,0] # winning combinations relative to first comp: rockpaper, paperscissors, scissorsrock
-    # ref1, ref2 = us + cs, cs + us  # user input <=> concatenated with computer inp  ut
+    # winCombo = [0,1], [1,2], [2,0] # winning combinations relative to first comp: rockpaper, paperscissors,
+    # scissorsrock ref1, ref2 = us + cs, cs + us  # user input <=> concatenated with computer inp  ut
 
     # if ref1 in winCombo:  # relative to user input, computer wins
-	# 	result = "You lost!", cPoint + 1
-	# elif ref2 in winCombo:  # relative to computers input, you win
-	# 	result, uPoint = "You won!", uPoint + 1
-	# elif us == cs:  # draw
-	# 	win = "tie"
+    # 	result = "You lost!", cPoint + 1
+    # elif ref2 in winCombo:  # relative to computers input, you win
+    # 	result, uPoint = "You won!", uPoint + 1
+    # elif us == cs:  # draw
+    # 	win = "tie"
 
     if us == cs:
-        win = "tie"
+        win_q = "tie"
     elif us == "rock" and cs == "paper":
-        win = "computer"
+        win_q = "computer"
     elif us == "rock" and cs == "scissors":
-        win = "human"
+        win_q = "human"
     elif us == "paper" and cs == "rock":
-        win = "human"
+        win_q = "human"
     elif us == "paper" and cs == "scissors":
-        win = "computer"
+        win_q = "computer"
     elif us == "scissors" and cs == "rock":
-        win = "computer"
+        win_q = "computer"
     elif us == "scissors" and cs == "paper":
-        win = "human"
+        win_q = "human"
 
-    return win
+    return win_q
 
 
 def filecleanup():
@@ -64,13 +63,13 @@ datafile.close()
 datafile = open("gameData.txt", "w")
 
 while True:
-    if run == True:
+    if run:
         x = input("[1] to continue, or [2] to Quit: ")
     if x == "1":
         error = True
         print("R = rock.  P = paper.  S = scissors.")
         us = input("Enter your choice: ")
-       # cs = computerChoice()
+        # cs = computerChoice()
         cs = random.randint(1, 3)
         if us == "R" or us == "r" or us == "Rock" or us == "rock":
             us = 1
@@ -82,7 +81,7 @@ while True:
             us = 3
             error = False
 
-        if error == False:
+        if not error:
             computerHistory.append(cs)
             humanHistory.append(us)
 
@@ -103,7 +102,7 @@ while True:
                 print("The computer wins.")
             print("Your score is", humanScore, "of", count, ".")
             print("The computer's score is", computerScore, "of", count, ".")
-        if error == True:
+        if error:
             print("That is an invalid command!")
 
         run = True
@@ -112,3 +111,5 @@ while True:
     if x != ("1" or "2"):
         print("That is an invalid command!")
         run = True
+
+filecleanup()
