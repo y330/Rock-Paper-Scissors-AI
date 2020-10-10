@@ -1,4 +1,4 @@
-# Rock Paper Scissors AI
+# Rock Paper Scissors AI in Python 3
 
 ***Yonah Aviv***
 
