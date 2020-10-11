@@ -5,7 +5,18 @@
 #  basic game structure is present however no machine learning model has been implemented 
 import random
 
-
+def compchoice(us, win_q):
+    if win_q == human: 
+        if us == 3:
+            cs = 1
+        else:
+            cs = us + 1
+     elif win_q == "computer":
+        if us == 3:
+            cs = 3
+        else:
+            cs = us
+      return cs
 def getwinner(cs, us):
     # winCombo = [0,1], [1,2], [2,0] # winning combinations relative to first comp: rockpaper, paperscissors,
     # scissorsrock ref1, ref2 = us + cs, cs + us  # user input <=> concatenated with computer inp  ut
@@ -54,7 +65,8 @@ winHistory = []
 computerHistory = []
 humanHistory = []
 
-name = input("Name: ")
+name = input("Type a name to be able to save game: ")
+Win = "human"
 datafile = open("gameData.txt", "r")
 prevdata = datafile.read()
 datafile.close()
@@ -71,7 +83,7 @@ while True:
         print("R = rock.  P = paper.  S = scissors.")
         us = input("Enter your choice: ")
         # cs = computerChoice()
-        cs = random.randint(1, 3)
+        cs = compchoice(us, win) 
         if us == "R" or us == "r" or us == "Rock" or us == "rock":
             us = 1
             error = False
@@ -113,4 +125,4 @@ while True:
         print("That is an invalid command!")
         run = True
 
-filecleanup()
+filecleanup() #log history in gameData.txt
