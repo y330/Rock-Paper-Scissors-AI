@@ -3,6 +3,8 @@
 # Date created: October 6, 2020
 
 import random
+
+
 # Game is playable but computer decisions are random. No AI yet
 
 def compchoice():
@@ -18,8 +20,10 @@ def compchoice():
             cs = us
       return cs
     """
-    cs = random.randint(1,3)
+    cs = random.randint(1, 3)
     return cs
+
+
 def getwinner(cs, us):
     # winCombo = [0,1], [1,2], [2,0] # winning combinations relative to first comp: rockpaper, paperscissors,
     # scissorsrock ref1, ref2 = us + cs, cs + us  # user input <=> concatenated with computer inp  ut
@@ -85,7 +89,7 @@ while True:
         print("R = rock.  P = paper.  S = scissors.")
         us = input("Enter your choice: ")
         # cs = computerChoice()
-        cs = compchoice() 
+        cs = compchoice()
         if us == "R" or us == "r" or us == "Rock" or us == "rock":
             us = 1
             error = False
@@ -127,4 +131,4 @@ while True:
         print("That is an invalid command!")
         run = True
 
-filecleanup() #log history in gameData.txt
+filecleanup()  # log history in gameData.txt
