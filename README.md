@@ -2,7 +2,10 @@
 
 ***Yonah Aviv***
 
-Rock paper scissors game using statistical models to predict user input from user history. 
+Rock paper scissors game with AI that predict user input.
+
+Currently, only the game works, but the "AI" is random.
+
 
 [Go to rockPaperScic.py](rockPaperScic.py)
 
