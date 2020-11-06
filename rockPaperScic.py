@@ -2,6 +2,7 @@
 # Author: Yonah Aviv
 # Date created: October 6, 2020
 
+import random
 # Game is playable but computer decisions are random. No AI yet
 
 def compchoice():
