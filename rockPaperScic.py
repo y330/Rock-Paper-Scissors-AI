@@ -2,8 +2,7 @@
 # Author: Yonah Aviv
 # Date created: October 6, 2020
 
-#  basic game structure is present however no machine learning model has been implemented 
-import random
+# Game is playable but computer decisions are random. No AI yet
 
 def compchoice():
     """if win_q == human: 
