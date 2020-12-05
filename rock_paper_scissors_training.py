@@ -3,15 +3,7 @@
 # modified: 12/05/2020
 
 # training/simulations/test for rock paper scissors(rps)
-""" "Rock, Paper, Scissors game using a random number generator 
-to select two opponents for each round. Each game was played 
-to completion. To get smooth results, I repeated this exercise
-10,000 times for all combitions of starting players from 1-50 of
-each symbol. I counted the number of times the Rock team won, the 
-number of times the Paper team won, and the number of times the
-Scissor team won. I also recorded the average number of rounds that 
-were required to produce a winner"(DataGenetics)
-
+""" Using a mathematical explanation of Rock, Paper, Scissors from datagenetics.com
 
 Rock, Paper, Scissors. Datagenetics.com (2013), (available at http://datagenetics.com/blog/march52013/index.html).
 """
