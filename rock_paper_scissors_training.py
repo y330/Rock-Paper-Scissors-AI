@@ -3,9 +3,7 @@
 # modified: 12/05/2020
 
 # training/simulations/test for rock paper scissors(rps)
-""" Using a mathematical explanation of Rock, Paper, Scissors from datagenetics.com
-
-Rock, Paper, Scissors. Datagenetics.com (2013), (available at http://datagenetics.com/blog/march52013/index.html).
+""" Using a mathematical explanation of Rock, Paper, Scissors from datagenetics.com, available at http://datagenetics.com/blog/march52013/index.html).
 """
 
 
