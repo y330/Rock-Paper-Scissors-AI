@@ -7,7 +7,8 @@
   
 
 
-Work in progress, come back later for a complete jupyter notebook in the [Training](Training) folder.
+This is a work in progress, but you can play against a computer that is random in [rockPaperScic.py](rockPaperScic.py)
+.
 
 
   
@@ -19,7 +20,6 @@ Work in progress, come back later for a complete jupyter notebook in the [Traini
 
 Rock paper scissors game with AI that predict user input.
 
-
-[Go to rockPaperScic.py](rockPaperScic.py)
+Come back later for a complete jupyter notebook in the [Training](Training) folder, which will use machine learning.
 
 
