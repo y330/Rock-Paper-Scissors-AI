@@ -7,9 +7,9 @@
   
 
 
-This is a work in progress, but you can play against a computer that is random in [rockPaperScic.py](rockPaperScic.py)
-.
+This is a work in progress, but you can play rock paper scissors against a computer that is random in [rockPaperScic.py](rockPaperScic.py).
 
+Come back later for a jupyter  notebook in the [Training](Training) folder to see them mechanics of my RPS model, which will use machine learning.
 
   
 
@@ -20,6 +20,5 @@ This is a work in progress, but you can play against a computer that is random i
 
 Rock paper scissors game with AI that predict user input.
 
-Come back later for a complete jupyter notebook in the [Training](Training) folder, which will use machine learning.
 
 
