@@ -15,7 +15,9 @@
 
 ## Background and methods
 
-I took a great walkthrough on a statistical analysis of rock paper scissors from [DataGentics](http://datagenetics.com/blog/march52013/index.html), [written by Nick Barry](http://datagenetics.com/about.html)(I think) and used it as a reference for my code. 
+I took a great walkthrough on a statistical analysis of rock paper scissors from [DataGentics](http://datagenetics.com/blog/march52013/index.html), written by [Nick Barry](http://datagenetics.com/about.html) (I think) and used it as a reference for my code. 
+
+__The following are snippets from the article:__
 
 ### Mixtures
 
@@ -32,8 +34,11 @@ I took a great walkthrough on a statistical analysis of rock paper scissors from
 ----
 
 Rock paper scissors game with AI that predicts the future.
+By Yonah Aviv
+----
 
-## Works Cited
+
+References
 
 1. Barry, Nick. “Rock, Paper, Scissors.” Datagenetics.com, 2013, datagenetics.com/blog/march52013/index.html. Accessed 6 Dec. 2020.
 
