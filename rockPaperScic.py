@@ -1,8 +1,27 @@
-# File name:ockPaperScic.py
+# File name: rockPaperScic.py
 # Author: Yonah Aviv
 # Date created: October 6, 2020
 
 import random
+
+
+# Game is playable but computer decisions are random. No AI yet
+
+def compchoice():
+    """if win_q == human:
+        if us == 3:
+            cs = 1
+        else:
+            cs = us + 1
+     elif win_q == "computer":
+        if us == 3:
+            cs = 3
+        else:
+            cs = us
+      return cs
+    """
+    cs = random.randint(1, 3)
+    return cs
 
 
 def getwinner(cs, us):
@@ -34,14 +53,6 @@ def getwinner(cs, us):
     return win_q
 
 
-def checkfile(filename):
-    try:
-        status = open(filename, "x")
-    except FileExistsError:
-        status = open(filename, "r")
-    return status
-
-
 def filecleanup():
     print(prevdata, file=datafile)
     if name != "test":
@@ -60,9 +71,9 @@ choices = ["rock", "paper", "scissors"]
 winHistory = []
 computerHistory = []
 humanHistory = []
-print
-name = input("Name: ")
-datafile = checkfile("gameData.txt")  # check if gameData.txt exists
+
+name = input("Type a name to be able to save game: ")
+datafile = open("gameData.txt", "r")
 prevdata = datafile.read()
 datafile.close()
 # backfile = open("gameDataBackup.txt", "w")
@@ -73,25 +84,13 @@ datafile = open("gameData.txt", "w")
 while True:
     if run:
         print("""
-        ██     ██ ███████ ██      ██████  ██████  ███    ███ ███████ 
-██     ██ ██      ██     ██      ██    ██ ████  ████ ██      
-██  █  ██ █████   ██     ██      ██    ██ ██ ████ ██ █████ 
-██ ███ ██ ██      ██     ██      ██    ██ ██  ██  ██ ██    
- ███ ███  ███████ ███████ ██████  ██████  ██      ██ ███████ 
-                                                             
+        Welcome to Rock Paper scissors! 
 
         """)
-        x = input("\n\n[1]Continue \n[2]Quit\nThe choice is yours: ")
+        x = input("\n\nContinue?(Y/n): ")
     if x == "1":
         error = True
-        print("""██████      ██ ██████    ██ ███████ 
-██   ██    ██  ██   ██  ██  ██      
-██████    ██   ██████  ██   ███████ 
-██   ██  ██    ██     ██         ██ 
-██   ██ ██     ██    ██     ███████ 
-                                    
-                                    """)
-        us = input("Enter your choice: ")
+        us = input("Choose hand(R/p/s): ")
         # cs = computerChoice()
         cs = random.randint(1, 3)
         if us in ["R", "r", "Rock", "rock"]:
@@ -111,18 +110,18 @@ while True:
             count += 1
             cs = choices[cs - 1]
             us = choices[us - 1]
-            print("You chose", us, "and the computer chose", cs, ":")
+            print("You picked", us, "and the computer picked", cs, ":")
             win = getwinner(cs, us)
 
             winHistory.append(win)
             if win == "tie":
-                print("The game is a tie.")
+                print("We tied! :|")
             if win == "human":
                 humanScore += 1
-                print("You win!")
+                print("You won! :,(")
             if win == "computer":
                 computerScore += 1
-                print("The computer wins.")
+                print("You lost! :P")
             print("Your score is", humanScore, "of", count, ".")
             print("The computer's score is", computerScore, "of", count, ".")
         if error:
@@ -136,4 +135,3 @@ while True:
         run = True
 
 filecleanup()
-5
