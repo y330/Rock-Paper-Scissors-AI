@@ -20,11 +20,13 @@ def compchoice():
             cs = us
       return cs
     """
+
     cs = random.randint(1, 3)
     return cs
 
 
 def getwinner(cs, us):
+    """"""
     # winCombo = [0,1], [1,2], [2,0] # winning combinations relative to first comp: rockpaper, paperscissors,
     # scissorsrock ref1, ref2 = us + cs, cs + us  # user input <=> concatenated with computer inp  ut
 
